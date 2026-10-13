@@ -1044,3 +1044,23 @@ h1.hero-headline{font-size:clamp(1.32rem,7vw,1.6rem)}
 .role-chip{font-size:11px;padding:8px 12px;max-width:100%}
 .hero-socials{justify-content:center}
 }
+
+
+/* ===== Mobile hero v2: compact readable text ===== */
+@media(max-width:768px){
+.hero-content{align-items:flex-start;text-align:left;max-width:100%}
+.hero-inner{justify-items:stretch}
+.badges-row,.hero-btn-row,.hero-socials{justify-content:flex-start}
+.hero-divider{margin-left:0;margin-right:0}
+h1.hero-headline{font-size:clamp(1.5rem,6.4vw,2rem)}
+.role-chip{justify-content:flex-start}
+.hero-visual{order:-1;display:flex;justify-content:flex-start}
+.pfp-wrap{width:min(120px,32vw);height:min(120px,32vw)}
+.pfp-ring-frame{width:min(152px,40vw);height:min(152px,40vw)}
+.pfp-glow{width:min(150px,42vw);height:min(150px,42vw)}
+}
+@media(max-width:480px){
+.role-chip .role-label{display:none}
+h1.hero-headline{font-size:clamp(1.4rem,7.4vw,1.7rem);line-height:1.22}
+.hero-intro{font-size:.93rem}
+}
