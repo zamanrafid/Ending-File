@@ -1036,3 +1036,8 @@ item.classList.remove("open");
 var panel=item.querySelector(".faq-a");if(panel)panel.style.maxHeight=null;
 var q=item.querySelector(".faq-q");if(q)q.setAttribute("aria-expanded","false");
 item.classList.toggle("hide",!show);});});});})();
+
+
+/* Hamburger: auto-close when resized to desktop (prevents locked scroll + stuck menu) */
+(function(){var q=window.matchMedia("(min-width:1025px)");function sync(){try{if(q.matches&&typeof closeMenu==="function"&&document.getElementById("navLinks").classList.contains("open")){closeMenu();}}catch(e){}}
+if(q.addEventListener){q.addEventListener("change",sync);}window.addEventListener("resize",sync);sync();})();

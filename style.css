@@ -1015,3 +1015,10 @@ h1.hero-headline{overflow-wrap:break-word;text-wrap:balance}
 
 /* foldable safety */
 @media(max-width:360px){.rz-grid,.rz-grid-2,.rz-grid-3{grid-template-columns:1fr}.rz-trust-item{min-width:100%}.ts-grid{grid-template-columns:repeat(auto-fill,minmax(160px,1fr))}.faq-filter{padding:9px 15px;font-size:.8rem}}
+
+/* ===== Navbar spacing: 9 links + search + CTA breathing room ===== */
+.nav-links{gap:2px}
+.nav-links a{padding:8px 11px;font-size:.86rem;white-space:nowrap}
+.nav-cta{gap:10px}
+.nav-search-wrap{width:120px}
+@media(max-width:1240px){.nav-search-wrap{width:104px}.nav-links a{padding:8px 9px;font-size:.83rem}.nav-cta{gap:8px}.logo{font-size:1.1rem}}
