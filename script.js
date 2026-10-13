@@ -1041,3 +1041,14 @@ item.classList.toggle("hide",!show);});});});})();
 /* Hamburger: auto-close when resized to desktop (prevents locked scroll + stuck menu) */
 (function(){var q=window.matchMedia("(min-width:1025px)");function sync(){try{if(q.matches&&typeof closeMenu==="function"&&document.getElementById("navLinks").classList.contains("open")){closeMenu();}}catch(e){}}
 if(q.addEventListener){q.addEventListener("change",sync);}window.addEventListener("resize",sync);sync();})();
+
+
+/* Icon fallback: if Font Awesome fails (CDN/adblock), load from backup CDN so icons never disappear */
+(function(){var SRC="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css";
+function loaded(){try{if(!document.fonts||!document.fonts.check)return true;
+return document.fonts.check('16px "Font Awesome 6 Free"')||document.fonts.check('16px "Font Awesome 6 Brands"');}catch(e){return true;}}
+function fix(){if(loaded())return;
+if(document.querySelector('link[data-fa-fallback]'))return;
+var l=document.createElement('link');l.rel='stylesheet';l.href=SRC;l.setAttribute('data-fa-fallback','1');document.head.appendChild(l);}
+function sched(){setTimeout(fix,1200);setTimeout(fix,4000);}
+if(document.readyState==='complete'){sched();}else{window.addEventListener('load',sched);}})();
