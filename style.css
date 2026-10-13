@@ -1079,3 +1079,12 @@ h1.hero-headline{font-size:clamp(1.4rem,7.4vw,1.7rem);line-height:1.22}
 .hero-btn-row{flex-direction:row;align-items:stretch;gap:10px;width:100%;max-width:420px}
 .hero-btn-row .btn{flex:1 1 0;min-width:0;padding-left:10px;padding-right:10px;font-size:.88rem}
 }
+
+
+/* ===== Mobile hero v4: photo below text, big size ===== */
+@media(max-width:768px){
+.hero-visual{order:0;justify-content:center;margin-top:6px}
+.pfp-wrap{width:min(260px,70vw);height:min(260px,70vw)}
+.pfp-ring-frame{width:min(320px,86vw);height:min(320px,86vw)}
+.pfp-glow{width:min(300px,82vw);height:min(300px,82vw)}
+}
